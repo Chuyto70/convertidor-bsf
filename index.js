@@ -16,7 +16,7 @@ function getInfo(){
         console.log(err);
     });
 }
-getInfo()
+getInfo().then(res=> console.log('Peticion hecha') ).catch(err => console.log(err))
 let info = JSON.parse(localStorage.getItem('monedas'))
 let usd = info.USD.dolartoday
 
