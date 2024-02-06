@@ -7,6 +7,8 @@ function getInfo(){
 
     axios.get('https://s3.amazonaws.com/dolartoday/data.json')
     .then( (result) => {
+        console.log('Aqui el resultado')
+        console.log(result)
         let datos =  result.data
         localStorage.setItem('monedas', JSON.stringify(datos))
         
